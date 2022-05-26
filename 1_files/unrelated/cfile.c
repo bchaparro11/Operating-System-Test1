@@ -18,6 +18,7 @@ int main(){
     printf("Terminó la lectura!\n");
 
     fclose(fbridge);
+    system("rm cfile");
 
     return 0;
 }

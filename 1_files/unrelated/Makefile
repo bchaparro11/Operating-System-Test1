@@ -1,7 +1,3 @@
-scriptfile:
-	gcc file.c -o file
-	./file
-	rm file
 scriptpfile:
 	gcc pfile.c -o pfile
 	./pfile
