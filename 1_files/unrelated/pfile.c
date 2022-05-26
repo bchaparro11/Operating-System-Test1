@@ -16,12 +16,13 @@ int main(){
     for(int i=0;i<weigth;i++){
         *(row+i) = 'Z';
     }
-
+    //AQUÍ EMPIEZA EL TIEMPO
     fwrite(row,weigth*sizeof(char),1,fbridge);
     
     printf("Terminó la creación!\n");
 
     fclose(fbridge);
+    //AQUÍ FINALIZA
     system("gcc cfile.c -o cfile");
     char *args[]={"./cfile",NULL};
     execv(args[0],args);

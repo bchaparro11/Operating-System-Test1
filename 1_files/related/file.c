@@ -21,7 +21,7 @@ int main(){
         *(row+i) = 'Z';
     }
 
-
+    //AQUÍ EMPIEZA EL TIEMPO
     //Creating fork()
     pid_t pid;
     pid = fork();
@@ -34,13 +34,14 @@ int main(){
     if(pid == 0){
         fwrite(row,weigth*sizeof(char),1,fbridge);
         printf("Terminó la creación!\n");
+        //AQUÍ FINALIZA
     }else{
         wait(NULL);
         fseek(fbridge,0,SEEK_SET);
         fread(row,sizeof(char),weigth,fbridge);
         printf("Terminó la lectura!\n");
     }
-
+    
     fclose(fbridge);
         
     return 0;
